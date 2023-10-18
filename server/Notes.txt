@@ -3,3 +3,35 @@
 - We define typeDefs
 - ID is a type for unique identification
 - ! is used to say that the field is required (can't be null)
+- query ReviewQuery($id: ID!) {
+  game(id: $id) {
+    title
+  },
+}
+
+In variables:
+{
+    "id":"1"
+}
+
+(In Apollo page)
+
+- Nested Query:
+query ExampleQuery {
+  reviews {
+    id,
+    game {
+      platform
+    }
+  }
+  games {
+    id,
+    reviews {
+      content,
+      rating
+    }
+  }
+  authors {
+    id
+  }
+}
