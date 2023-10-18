@@ -5,11 +5,14 @@ import {expressMiddleware} from "@apollo/server/express4";
 import bodyParser from "body-parser";
 import {startStandaloneServer} from "@apollo/server/standalone"
 
+//* Types
+import { typeDefs } from "./schema.js";
+
 const app = express();
 
 //* Server setup
 const server = new ApolloServer({
-    //typeDefs
+    typeDefs,
     //resolvers
 })
 

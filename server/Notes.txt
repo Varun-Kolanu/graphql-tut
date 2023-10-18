@@ -1,2 +1,5 @@
 - npm i express
 - npm i @apollo/server graphql
+- We define typeDefs
+- ID is a type for unique identification
+- ! is used to say that the field is required (can't be null)
