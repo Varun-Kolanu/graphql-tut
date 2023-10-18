@@ -35,3 +35,17 @@ query ExampleQuery {
     id
   }
 }
+
+- Add Mutation Variables to pass:
+mutation AddMutation($game: AddGameInput!) {
+  addGame(game: $game) {
+    id,
+    title
+  }
+}
+{
+  "game": {
+    "title": "Hello",
+    "platform":["pl1", "pl2"]
+  }
+}
